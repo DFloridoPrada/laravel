@@ -17,7 +17,9 @@ class TaskFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nombre' => $this -> faker -> sentence(),
+            'descripcion' => $this -> faker -> paragraph(),
+            'completada' => $this -> faker -> boolean()
         ];
     }
 }
