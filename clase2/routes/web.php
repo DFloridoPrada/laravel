@@ -15,7 +15,7 @@ Route::get('/', function () {
 // });
 
 // Get con controlador
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/article/{id}', [HomeController::class, 'show']);
 Route::get('/mostrar_usuario/{nombre}', [HomeController::class, 'mostrarUsuario']);
 
