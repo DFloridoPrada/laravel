@@ -1,8 +1,6 @@
 <x-app-layout>
     <x-slot name="content">
-        <!-- TODO -->
-        <x-header title="Gestor de tareas">
-
-        </x-header>
+        <x-header title="Gestor de tareas" :array="[['Inicio', '/'], ['Añadir tarea', '/tareas'], ['Contacto', '/contacto']]"/>
+        <x-table :dates="$tasks"/>
     </x-slot>
 </x-app-layout>
