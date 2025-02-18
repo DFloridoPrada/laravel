@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index() {
-        $tasks = Task::paginate(10);
-        return view('home', ['tasks' => $tasks]);
+        return view('home');
     }
 }

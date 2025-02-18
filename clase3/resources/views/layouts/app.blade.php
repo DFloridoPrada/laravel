@@ -10,7 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="w-screen h-screen">
-    {{$content}}
+<body class="w-screen h-screen min-h-full flex flex-col bg-[#10151b]">
+    {{$slot}}
+    <footer class="flex justify-center items-center w-full bg-[#1E2939] h-[3rem] text-white">
+        David Florido Prada | Todos los derechos reservados
+    </footer>
+    @include('notify::components.notify')
+    @notifyJs
 </body>
 </html>

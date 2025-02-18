@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Task;
-use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
     public function index() {
-
+        $tasks = Task::paginate(5);
+        notify()->success(__('Role has been changed.'));
+        return view('tasks', ['tasks' => $tasks]);
     }
 }
 
